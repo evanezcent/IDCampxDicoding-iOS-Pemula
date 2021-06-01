@@ -15,6 +15,10 @@
 		9D223F4E26635B5C00B82356 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D223F4C26635B5C00B82356 /* LaunchScreen.storyboard */; };
 		9D223F5926635B5C00B82356 /* DicodingAppsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D223F5826635B5C00B82356 /* DicodingAppsTests.swift */; };
 		9D223F6426635B5C00B82356 /* DicodingAppsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D223F6326635B5C00B82356 /* DicodingAppsUITests.swift */; };
+		9D733585266684CA000C6EC6 /* AcademiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D733584266684CA000C6EC6 /* AcademiesViewController.swift */; };
+		9D73358A266684DA000C6EC6 /* ChallengesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D733589266684DA000C6EC6 /* ChallengesViewController.swift */; };
+		9D73358F266684E8000C6EC6 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D73358E266684E8000C6EC6 /* DetailViewController.swift */; };
+		9D733594266684F3000C6EC6 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D733593266684F3000C6EC6 /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,10 @@
 		9D223F5F26635B5C00B82356 /* DicodingAppsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DicodingAppsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D223F6326635B5C00B82356 /* DicodingAppsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DicodingAppsUITests.swift; sourceTree = "<group>"; };
 		9D223F6526635B5C00B82356 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9D733584266684CA000C6EC6 /* AcademiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcademiesViewController.swift; sourceTree = "<group>"; };
+		9D733589266684DA000C6EC6 /* ChallengesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengesViewController.swift; sourceTree = "<group>"; };
+		9D73358E266684E8000C6EC6 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		9D733593266684F3000C6EC6 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,9 +107,9 @@
 		9D223F4026635B5B00B82356 /* DicodingApps */ = {
 			isa = PBXGroup;
 			children = (
+				9D73358026667795000C6EC6 /* Controller */,
 				9D223F4126635B5B00B82356 /* AppDelegate.swift */,
 				9D223F4326635B5B00B82356 /* SceneDelegate.swift */,
-				9D223F4526635B5B00B82356 /* ViewController.swift */,
 				9D223F4726635B5B00B82356 /* Main.storyboard */,
 				9D223F4A26635B5C00B82356 /* Assets.xcassets */,
 				9D223F4C26635B5C00B82356 /* LaunchScreen.storyboard */,
@@ -126,6 +134,18 @@
 				9D223F6526635B5C00B82356 /* Info.plist */,
 			);
 			path = DicodingAppsUITests;
+			sourceTree = "<group>";
+		};
+		9D73358026667795000C6EC6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9D223F4526635B5B00B82356 /* ViewController.swift */,
+				9D733584266684CA000C6EC6 /* AcademiesViewController.swift */,
+				9D733589266684DA000C6EC6 /* ChallengesViewController.swift */,
+				9D73358E266684E8000C6EC6 /* DetailViewController.swift */,
+				9D733593266684F3000C6EC6 /* ProfileViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,7 +280,11 @@
 			files = (
 				9D223F4626635B5B00B82356 /* ViewController.swift in Sources */,
 				9D223F4226635B5B00B82356 /* AppDelegate.swift in Sources */,
+				9D733585266684CA000C6EC6 /* AcademiesViewController.swift in Sources */,
 				9D223F4426635B5B00B82356 /* SceneDelegate.swift in Sources */,
+				9D73358A266684DA000C6EC6 /* ChallengesViewController.swift in Sources */,
+				9D733594266684F3000C6EC6 /* ProfileViewController.swift in Sources */,
+				9D73358F266684E8000C6EC6 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

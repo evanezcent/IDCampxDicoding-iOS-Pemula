@@ -11,7 +11,7 @@
         <!--My Profile-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DicodingApps" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewScene" id="BYZ-38-t0r" customClass="ViewController" customModule="DicodingApps" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -170,10 +170,10 @@
             </objects>
             <point key="canvasLocation" x="928.98550724637687" y="77.678571428571431"/>
         </scene>
-        <!--View Controller-->
+        <!--Profile View Controller-->
         <scene sceneID="2SG-Bf-UCe">
             <objects>
-                <viewController id="gTS-MX-cii" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProfileScene" id="gTS-MX-cii" customClass="ProfileViewController" customModule="DicodingApps" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NYN-U7-HAW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -230,7 +230,7 @@
         <!--Challenges-->
         <scene sceneID="kIq-WO-fsh">
             <objects>
-                <viewController id="vur-4h-G7k" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ChallengesScene" id="vur-4h-G7k" customClass="ChallengesViewController" customModule="DicodingApps" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sHh-0Y-pOW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -341,6 +341,13 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Challenges" image="challenges" id="vLB-gF-787"/>
+                    <connections>
+                        <outlet property="arStack" destination="5ea-gx-f7a" id="uno-JA-Eo4"/>
+                        <outlet property="bookStack" destination="VY7-C6-Icm" id="Ltp-cN-55r"/>
+                        <outlet property="expertStack" destination="Wyb-x7-yuX" id="erk-xK-2WF"/>
+                        <outlet property="flutterStack" destination="ycM-y8-uN0" id="c9z-o5-poP"/>
+                        <outlet property="webStack" destination="5ii-U4-0BZ" id="OPE-ZD-gH1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TwL-zH-QJY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -349,7 +356,7 @@
         <!--Academies-->
         <scene sceneID="T25-BC-tIn">
             <objects>
-                <viewController id="oNm-FE-jsh" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AcademiesScene" id="oNm-FE-jsh" customClass="AcademiesViewController" customModule="DicodingApps" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lTH-Ei-sYX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -461,10 +468,66 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Academies" image="academies" id="inx-8o-cYh"/>
+                    <connections>
+                        <outlet property="androidStack" destination="g5f-p9-7Vf" id="45e-Sz-asm"/>
+                        <outlet property="arStack" destination="utL-8u-EQV" id="D2y-2o-loa"/>
+                        <outlet property="cloudStack" destination="3Kg-dy-liL" id="vHQ-yG-Sn8"/>
+                        <outlet property="unityStack" destination="55w-9O-BsX" id="5WP-3o-Xmi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wV8-Kc-Yfl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="18.840579710144929" y="780.80357142857144"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="gtT-Zn-SnU">
+            <objects>
+                <viewController storyboardIdentifier="DetailViewScene" id="tGr-ne-Aaz" customClass="DetailViewController" customModule="DicodingApps" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jch-QW-P5F">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="TITLE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QPo-kR-N5T">
+                                <rect key="frame" x="8" y="144" width="398" height="144"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <color key="textColor" red="1" green="0.33333333329999998" blue="0.51764705879999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="android" translatesAutoresizingMaskIntoConstraints="NO" id="eJF-xY-vbw">
+                                <rect key="frame" x="57" y="298" width="300" height="300"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Description" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GjD-Je-DxJ">
+                                <rect key="frame" x="8" y="606" width="398" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="HeC-EM-ghM"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="QPo-kR-N5T" firstAttribute="centerX" secondItem="jch-QW-P5F" secondAttribute="centerX" id="13Q-hA-F5S"/>
+                            <constraint firstItem="GjD-Je-DxJ" firstAttribute="leading" secondItem="jch-QW-P5F" secondAttribute="leading" constant="8" id="8oD-ks-oP8"/>
+                            <constraint firstItem="HeC-EM-ghM" firstAttribute="trailing" secondItem="GjD-Je-DxJ" secondAttribute="trailing" constant="8" id="B03-5x-Pzp"/>
+                            <constraint firstItem="eJF-xY-vbw" firstAttribute="centerY" secondItem="jch-QW-P5F" secondAttribute="centerY" id="NJI-dv-op6"/>
+                            <constraint firstItem="eJF-xY-vbw" firstAttribute="top" secondItem="QPo-kR-N5T" secondAttribute="bottom" constant="10" id="RRD-t9-MMv"/>
+                            <constraint firstItem="QPo-kR-N5T" firstAttribute="top" secondItem="HeC-EM-ghM" secondAttribute="top" constant="100" id="Zes-j3-4Qr"/>
+                            <constraint firstItem="QPo-kR-N5T" firstAttribute="leading" secondItem="HeC-EM-ghM" secondAttribute="leading" constant="8" id="dcU-W3-5ed"/>
+                            <constraint firstItem="HeC-EM-ghM" firstAttribute="trailing" secondItem="QPo-kR-N5T" secondAttribute="trailing" constant="8" id="ekR-Ou-jGW"/>
+                            <constraint firstItem="GjD-Je-DxJ" firstAttribute="top" secondItem="QPo-kR-N5T" secondAttribute="bottom" constant="10" id="jsm-Ra-hrO"/>
+                            <constraint firstItem="HeC-EM-ghM" firstAttribute="bottom" secondItem="eJF-xY-vbw" secondAttribute="bottom" constant="8" id="lRQ-kd-tcJ"/>
+                            <constraint firstItem="eJF-xY-vbw" firstAttribute="centerX" secondItem="jch-QW-P5F" secondAttribute="centerX" id="yaB-PP-P8v"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="descDetail" destination="GjD-Je-DxJ" id="3ex-KV-eVH"/>
+                        <outlet property="imageDetail" destination="eJF-xY-vbw" id="wF7-1M-kVV"/>
+                        <outlet property="title" destination="QPo-kR-N5T" id="dbi-Bq-WTQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BQJ-iX-UiR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="816" y="781"/>
         </scene>
     </scenes>
     <resources>
