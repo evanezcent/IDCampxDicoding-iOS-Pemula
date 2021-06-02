@@ -33,7 +33,6 @@ class AcademiesViewController: UIViewController {
     func tapped(parameter: inout UIStackView) {
         parameter.isUserInteractionEnabled = true
         parameter.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.objectTapped)))
-        print("JALAN 1")
     }
     
     @objc func objectTapped(gesture: UIGestureRecognizer){
@@ -41,24 +40,24 @@ class AcademiesViewController: UIViewController {
                         name: "Main",
                         bundle: nil
                 ).instantiateViewController(
-                    withIdentifier: "DetailViewScene"
+                    withIdentifier: "DetailViewControllerScene"
                 ) as? DetailViewController else { return }
-        print("JALAN 2")
+     
         switch gesture.view as? UIStackView {
-        case(androidStack):
+        case(androidStack): 
             controller.detail = academies[0]
         case(unityStack):
             controller.detail = academies[1]
-        case(cloudStack):
-            controller.detail = academies[2]
         case(arStack):
+            controller.detail = academies[2]
+        case(cloudStack):
             controller.detail = academies[3]
         default:
             controller.detail = academies[4]
         }
         
         self.present(controller, animated: true, completion: nil)
-        print("JALAN #")
+        
     }
 
     /*

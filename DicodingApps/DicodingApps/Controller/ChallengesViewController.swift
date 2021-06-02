@@ -45,7 +45,7 @@ class ChallengesViewController: UIViewController {
                         name: "Main",
                         bundle: nil
                 ).instantiateViewController(
-                    withIdentifier: "DetailViewScene"
+                    withIdentifier: "DetailViewControllerScene"
                 ) as? DetailViewController else { return }
         
         print("JALAN")
@@ -65,7 +65,7 @@ class ChallengesViewController: UIViewController {
             controller.detail = challenges[5]
         }
         
-        self.present(controller, animated: true, completion: nil)
+        self.navigationController?.pushViewController(controller, animated: true)
     }
 
     

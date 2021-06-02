@@ -17,6 +17,8 @@ class DetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        print("INIT")
 
         titleDetail.text = detail.title
         descDetail.text = detail.desc
