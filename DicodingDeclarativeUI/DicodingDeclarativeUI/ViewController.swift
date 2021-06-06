@@ -14,7 +14,7 @@ class ViewController: UIViewController {
         
         view.backgroundColor = .systemTeal
         
-        let button = UIButton()
+        let button = UIButton(frame: CGRect(x: 180, y: 430, width: 70, height: 30))
         button.setTitleColor(.white, for: .normal)
         button.setTitle("BUTTON", for: .normal)
         button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)

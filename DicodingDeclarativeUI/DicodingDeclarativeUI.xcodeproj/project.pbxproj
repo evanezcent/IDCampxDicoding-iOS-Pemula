@@ -15,6 +15,7 @@
 		9DA07AF5266CFA6500C068EE /* DicodingDeclarativeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA07AF4266CFA6500C068EE /* DicodingDeclarativeUITests.swift */; };
 		9DA07B00266CFA6500C068EE /* DicodingDeclarativeUIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA07AFF266CFA6500C068EE /* DicodingDeclarativeUIUITests.swift */; };
 		9DA07B1F266CFE1900C068EE /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA07B1E266CFE1900C068EE /* DetailViewController.swift */; };
+		9DA07B24266D008200C068EE /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA07B23266D008200C068EE /* TabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		9DA07AFF266CFA6500C068EE /* DicodingDeclarativeUIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DicodingDeclarativeUIUITests.swift; sourceTree = "<group>"; };
 		9DA07B01266CFA6500C068EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9DA07B1E266CFE1900C068EE /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		9DA07B23266D008200C068EE /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				9DA07AE8266CFA6500C068EE /* LaunchScreen.storyboard */,
 				9DA07AEB266CFA6500C068EE /* Info.plist */,
 				9DA07B1E266CFE1900C068EE /* DetailViewController.swift */,
+				9DA07B23266D008200C068EE /* TabBarController.swift */,
 			);
 			path = DicodingDeclarativeUI;
 			sourceTree = "<group>";
@@ -260,6 +263,7 @@
 				9DA07AE2266CFA6400C068EE /* ViewController.swift in Sources */,
 				9DA07ADE266CFA6400C068EE /* AppDelegate.swift in Sources */,
 				9DA07AE0266CFA6400C068EE /* SceneDelegate.swift in Sources */,
+				9DA07B24266D008200C068EE /* TabBarController.swift in Sources */,
 				9DA07B1F266CFE1900C068EE /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
