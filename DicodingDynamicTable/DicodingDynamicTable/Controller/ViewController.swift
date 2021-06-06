@@ -14,8 +14,14 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Add title pada navigation
+        self.navigationItem.title = "Indonesian Heroes"
+        
         // Menghubungkan heroTableView dengan ke dua metode di bawah
         heroTableView.dataSource = self
+        
+        // Menambahkan delegate ke table view
+        heroTableView.delegate = self
         
         // Menghubungkan berkas XIB untuk HeroTableViewCell dengn heroTableView.
         heroTableView.register(UINib(nibName: "HeroTableViewCell", bundle: nil), forCellReuseIdentifier: "HeroCell")
@@ -43,5 +49,15 @@ extension ViewController: UITableViewDataSource {
         }else{
             return UITableViewCell()
         }
+    }
+}
+
+extension ViewController: UITableViewDelegate{
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let detail = DetailViewController(nibName:"DetailViewController", bundle: nil)
+        
+        detail.hero = heroes[indexPath.row]
+        
+        self.navigationController?.pushViewController(detail, animated: true)
     }
 }
