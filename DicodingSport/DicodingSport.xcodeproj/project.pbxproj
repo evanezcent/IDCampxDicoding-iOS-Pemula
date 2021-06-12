@@ -14,6 +14,8 @@
 		9D1EFE922673A3FE00B0B8C3 /* DicodingSportTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1EFE912673A3FE00B0B8C3 /* DicodingSportTests.swift */; };
 		9D1EFE9D2673A3FE00B0B8C3 /* DicodingSportUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1EFE9C2673A3FE00B0B8C3 /* DicodingSportUITests.swift */; };
 		9D1EFEBD2673A72800B0B8C3 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1EFEBC2673A72800B0B8C3 /* HomeView.swift */; };
+		9D2F26C62674A6E80091D919 /* ClubModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2F26C52674A6E80091D919 /* ClubModel.swift */; };
+		9D2F26DC2674B1B50091D919 /* ClubProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2F26DB2674B1B50091D919 /* ClubProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		9D1EFE9C2673A3FE00B0B8C3 /* DicodingSportUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DicodingSportUITests.swift; sourceTree = "<group>"; };
 		9D1EFE9E2673A3FE00B0B8C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9D1EFEBC2673A72800B0B8C3 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		9D2F26C52674A6E80091D919 /* ClubModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubModel.swift; sourceTree = "<group>"; };
+		9D2F26DB2674B1B50091D919 /* ClubProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +101,7 @@
 		9D1EFE7E2673A3FD00B0B8C3 /* DicodingSport */ = {
 			isa = PBXGroup;
 			children = (
+				9D2F26CA2674A9640091D919 /* Provider */,
 				9D1EFEB02673A42B00B0B8C3 /* Controller */,
 				9D1EFEAF2673A42200B0B8C3 /* View */,
 				9D1EFEAD2673A40F00B0B8C3 /* Model */,
@@ -138,6 +143,7 @@
 		9D1EFEAD2673A40F00B0B8C3 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				9D2F26C52674A6E80091D919 /* ClubModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -155,6 +161,14 @@
 			children = (
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		9D2F26CA2674A9640091D919 /* Provider */ = {
+			isa = PBXGroup;
+			children = (
+				9D2F26DB2674B1B50091D919 /* ClubProvider.swift */,
+			);
+			path = Provider;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -287,6 +301,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D1EFEBD2673A72800B0B8C3 /* HomeView.swift in Sources */,
+				9D2F26DC2674B1B50091D919 /* ClubProvider.swift in Sources */,
+				9D2F26C62674A6E80091D919 /* ClubModel.swift in Sources */,
 				9D1EFE822673A3FD00B0B8C3 /* ContentView.swift in Sources */,
 				9D1EFE802673A3FD00B0B8C3 /* DicodingSportApp.swift in Sources */,
 			);

@@ -8,9 +8,25 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State var teams: [ClubModel] = []
+    
     var body: some View {
-        HomeView()
+        HomeView(teams: $teams)
+            .onAppear(){
+                ClubProvider().getAllData{ (payload) in
+                    self.teams = payload
+                    print(teams[0])
+                }
+                
+            }
+            
     }
+    private func binding(for teams: [ClubModel]) -> Binding<[ClubModel]> {
+            return $teams
+        }
+    
+    
 }
 
 struct ContentView_Previews: PreviewProvider {
