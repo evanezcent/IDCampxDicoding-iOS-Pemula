@@ -12,39 +12,56 @@ struct HomeView: View {
    @Binding var teams: [ClubModel]
     
     var body: some View {
-        VStack(spacing: 15){
-            
-            HStack{
+        NavigationView {
+            VStack(spacing: 15){
                 
-                VStack(alignment: .leading, spacing: 15){
-                    Text("Clubs").font(.largeTitle)
-                    Button(action: {
+                HStack{
+                    
+                    VStack(alignment: .leading, spacing: 15){
+                        Text("Clubs").font(.largeTitle)
+                        Button(action: {
+                            
+                        }){
+                            Text("Premiere League")
+                        }.foregroundColor(.black)
+                    }
+                    
+                    Spacer()
+                    Button(action:{
                         
                     }){
-                        Text("Premiere League")
-                    }.foregroundColor(.black)
+                        Image("menu")
+                            .resizable()
+                            .frame(width: 30, height: 30)
+                    }
                 }
                 
-                Spacer()
-                Button(action:{
-                    
-                }){
-                    Image("menu")
-                        .resizable()
-                        .frame(width: 30, height: 30)
-                }
-            }
-            
-            SearchView().padding(.vertical, 15)
-            
-            ScrollView(.vertical, showsIndicators: false){
-                VStack(spacing: 15){
-                    ForEach(teams, id: \.idTeam){ team in
-                        CardView(teamName: team.strTeam, teamSlogan: team.strKeywords, imageURL: team.strTeamBadge)
+                SearchView().padding(.vertical, 15)
+                
+                if teams.isEmpty {
+                    VStack { 
+                        ProgressView().progressViewStyle(CircularProgressViewStyle())
                     }
-                }.padding()
-            }
-        }.padding()
+                    Spacer()
+                }
+                else {
+                    ScrollView(.vertical, showsIndicators: false){
+                        VStack(spacing: 15){
+                            ForEach(teams, id: \.idTeam){ team in
+                                NavigationLink(
+                                    destination: DetailView()){
+                                    CardView(teamName: team.strTeam, teamSlogan: team.strKeywords, imageURL: team.strTeamBadge)
+                                }
+                            }
+                        }.padding()
+                    }
+
+                }
+                
+                
+                            }.padding()
+            .navigationBarHidden(true)
+        }
     }
 }
 
