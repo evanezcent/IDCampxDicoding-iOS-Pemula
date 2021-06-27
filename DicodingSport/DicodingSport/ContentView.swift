@@ -16,7 +16,6 @@ struct ContentView: View {
             .onAppear(){
                 ClubProvider().getAllData{ (payload) in
                     self.teams = payload
-                    print(teams[0])
                 }
                 
             }

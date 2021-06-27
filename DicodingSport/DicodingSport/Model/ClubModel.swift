@@ -16,8 +16,9 @@ struct ClubModel: Codable {
     var strStadiumThumb: String
     var strKeywords: String
     var strDescriptionEN: String
+    var strTeamJersey: String
     
-    init(teamID: String, teamName: String, teamBadge: String, stadiumName: String,stadiumImage: String,teamSlogan: String,teamDescription: String) { 
+    init(teamID: String, teamName: String, teamBadge: String, stadiumName: String,stadiumImage: String,teamSlogan: String,teamDescription: String, teamJersey: String) {
             self.idTeam = teamID
             self.strTeam = teamName
             self.strTeamBadge = teamBadge
@@ -25,5 +26,6 @@ struct ClubModel: Codable {
             self.strStadiumThumb = stadiumImage
             self.strKeywords = teamSlogan
             self.strDescriptionEN = teamDescription
+            self.strTeamJersey = teamJersey
         }
 }

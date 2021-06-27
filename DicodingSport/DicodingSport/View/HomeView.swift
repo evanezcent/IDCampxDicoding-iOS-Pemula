@@ -49,7 +49,7 @@ struct HomeView: View {
                         VStack(spacing: 15){
                             ForEach(teams, id: \.idTeam){ team in
                                 NavigationLink(
-                                    destination: DetailView()){
+                                    destination: DetailView(team: team)){
                                     CardView(teamName: team.strTeam, teamSlogan: team.strKeywords, imageURL: team.strTeamBadge)
                                 }
                             }
