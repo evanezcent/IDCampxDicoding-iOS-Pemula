@@ -46,6 +46,16 @@ struct HomeView: View {
                         }
 
                         Spacer()
+                        
+                        NavigationLink(
+                            destination: ProfileView()){
+                            Image("anime-wolf")
+                                .resizable()
+                                .frame(width:40, height:40)
+                                .clipShape(Circle())
+                                .shadow(radius: 10)
+
+                        }
                     }
 
                     SearchView(search: binding)
