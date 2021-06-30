@@ -31,7 +31,6 @@ struct HomeView: View {
                     
                     Spacer()
                 }
-                .padding(.top, 40)
                 
                 SearchView().padding(.top, 15)
                 
@@ -49,7 +48,6 @@ struct HomeView: View {
                                     destination: DetailView(team: team)){
                                     CardView(teamName: team.strTeam, teamSlogan: team.strKeywords, imageURL: team.strTeamBadge)
                                 }
-                                .navigationBarC(Color("Dark"))
                             }
                         }.padding()
                     }
@@ -57,9 +55,11 @@ struct HomeView: View {
                 }
             }
             .padding()
+            .accentColor(Color("Primary"))
             .navigationBarHidden(true)
+            .navigationBarColor(UIColor(Color("Dark")))
             .background(Color("Dark"))
-                .edgesIgnoringSafeArea(.all)
+                .edgesIgnoringSafeArea([.bottom, .leading, .trailing])
         }
     }
 }
