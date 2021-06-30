@@ -110,6 +110,7 @@
 				9D1EFEAF2673A42200B0B8C3 /* View */,
 				9D1EFEAD2673A40F00B0B8C3 /* Model */,
 				9D1EFE7F2673A3FD00B0B8C3 /* DicodingSportApp.swift */,
+				9D1EFEBC2673A72800B0B8C3 /* HomeView.swift */,
 				9D1EFE812673A3FD00B0B8C3 /* ContentView.swift */,
 				9D1EFE832673A3FE00B0B8C3 /* Assets.xcassets */,
 				9D1EFE882673A3FE00B0B8C3 /* Info.plist */,
@@ -156,7 +157,6 @@
 			isa = PBXGroup;
 			children = (
 				9D4E77542688DB1F00ECB46D /* Components */,
-				9D1EFEBC2673A72800B0B8C3 /* HomeView.swift */,
 				9DD6844F2676F575004B13AD /* DetailView.swift */,
 			);
 			path = View;

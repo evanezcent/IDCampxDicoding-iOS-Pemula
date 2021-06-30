@@ -11,36 +11,33 @@ struct HomeView: View {
     
    @Binding var teams: [ClubModel]
     
+    
+    
     var body: some View {
+//        Color("Dark")
         NavigationView {
             VStack(spacing: 15){
                 
-                HStack{
-                    
+                HStack{ 
                     VStack(alignment: .leading, spacing: 15){
-                        Text("Clubs").font(.largeTitle)
-                        Button(action: {
-                            
-                        }){
-                            Text("Premiere League")
-                        }.foregroundColor(.black)
+                        Text("Premiere")
+                            .font(.largeTitle)
+                            .fontWeight(.bold)
+                            .foregroundColor(Color("Primary")
+                            )
+                        Text("League Clubs")
+                            .foregroundColor(Color("Primary"))
                     }
                     
                     Spacer()
-                    Button(action:{
-                        
-                    }){
-                        Image("menu")
-                            .resizable()
-                            .frame(width: 30, height: 30)
-                    }
                 }
+                .padding(.top, 40)
                 
-                SearchView().padding(.vertical, 15)
+                SearchView().padding(.top, 15)
                 
                 if teams.isEmpty {
                     VStack { 
-                        ProgressView().progressViewStyle(CircularProgressViewStyle())
+                        ProgressView().progressViewStyle(CircularProgressViewStyle(tint: Color("Primary")))
                     }
                     Spacer()
                 }
@@ -52,15 +49,17 @@ struct HomeView: View {
                                     destination: DetailView(team: team)){
                                     CardView(teamName: team.strTeam, teamSlogan: team.strKeywords, imageURL: team.strTeamBadge)
                                 }
+                                .navigationBarC(Color("Dark"))
                             }
                         }.padding()
                     }
 
                 }
-                
-                
-                            }.padding()
+            }
+            .padding()
             .navigationBarHidden(true)
+            .background(Color("Dark"))
+                .edgesIgnoringSafeArea(.all)
         }
     }
 }
@@ -85,21 +84,21 @@ struct CardView: View {
             
             VStack(alignment: .leading, spacing: 5){
                 Text("\(teamName)")
-                    .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
-                    .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                    .foregroundColor(Color("Primary"))
+                    .fontWeight(.bold)
                     .font(.system(size: 20))
                 Text("a.k.a Nickname : \(teamSlogan)")
-                    .foregroundColor(.gray)
+                    .foregroundColor(.white)
                     .font(.system(size: 16))
             }
             Spacer()
         }
         .frame(width: 320, height: 80)
         .padding(.horizontal, 20)
-        .padding(.vertical, 8)
-        .background(Color.white)
+        .padding(.vertical, 10)
+        .background(Color("Dark"))
         .cornerRadius(10)
-        .shadow(color: Color.gray, radius: 8, x: 0, y: 0)
+        .shadow(color: Color.black.opacity(0.3), radius: 8, x: 0, y: 0)
     }
 }
 
@@ -115,6 +114,7 @@ struct SearchView: View {
         .padding()
         .foregroundColor(.black)
         .background(Color("LightGray"))
+        .cornerRadius(5)
     }
 }
 
