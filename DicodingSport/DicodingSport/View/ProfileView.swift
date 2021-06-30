@@ -10,6 +10,8 @@ import SwiftUI
 struct ProfileView: View {
     var body: some View {
         VStack{
+            Spacer()
+            
             Image("anime-wolf")
                 .resizable()
                 .frame(width:200, height:200)
@@ -55,6 +57,8 @@ struct ProfileView: View {
                     bgColor:Color.black,
                     textColor:.white)
             }
+            
+            Spacer()
         }
         .padding()
         .accentColor(Color("Primary"))
