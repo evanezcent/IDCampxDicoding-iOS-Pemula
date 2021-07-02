@@ -21,9 +21,9 @@ struct HomeView: View {
         }, set: {
             self.searchText = $0
         })
-
+        
         NavigationView {
-
+            
             VStack(spacing: 15){
                 
                 if(splash){
@@ -32,7 +32,7 @@ struct HomeView: View {
                         .fontWeight(.bold)
                         .foregroundColor(.white)
                         .opacity(splash ? 1 : 0)
-
+                    
                 }else{
                     HStack{
                         VStack(alignment: .leading, spacing: 15){
@@ -44,23 +44,23 @@ struct HomeView: View {
                             Text("League Clubs")
                                 .foregroundColor(Color("Primary"))
                         }
-
+                        
                         Spacer()
                         
                         NavigationLink(
                             destination: ProfileView()){
-                            Image("anime-wolf")
+                            Image("me")
                                 .resizable()
                                 .frame(width:40, height:40)
                                 .clipShape(Circle())
                                 .shadow(radius: 10)
-
+                            
                         }
                     }
-
+                    
                     SearchView(search: binding)
                         .padding(.top, 15)
-
+                    
                     if teams.isEmpty {
                         VStack {
                             ProgressView().progressViewStyle(CircularProgressViewStyle(tint: Color("Primary")))
@@ -85,7 +85,7 @@ struct HomeView: View {
                                 }
                             }.padding()
                         }
-
+                        
                     }
                 }
             }
@@ -101,7 +101,7 @@ struct HomeView: View {
             .navigationBarHidden(true)
             .navigationBarColor(UIColor(Color("Dark")))
             .background(Color("Dark"))
-                .edgesIgnoringSafeArea([.bottom, .leading, .trailing])
+            .edgesIgnoringSafeArea([.bottom, .leading, .trailing])
         }
     }
 }
@@ -129,7 +129,7 @@ struct CardView: View {
             }
             Spacer()
         }
-        .frame(width: 320, height: 80)
+        .frame(height: 80)
         .padding(.horizontal, 20)
         .padding(.vertical, 10)
         .background(Color("Dark"))
@@ -165,4 +165,3 @@ extension Image {
         return self.resizable()
     }
 }
-//

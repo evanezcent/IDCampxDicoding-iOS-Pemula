@@ -19,13 +19,11 @@ struct ContentView: View {
                 }
                 
             }
-            
+        
     }
     private func binding(for teams: [ClubModel]) -> Binding<[ClubModel]> {
-            return $teams
-        }
-    
-    
+        return $teams
+    }
 }
 
 struct ContentView_Previews: PreviewProvider {

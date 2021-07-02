@@ -12,13 +12,13 @@ struct ProfileView: View {
         VStack{
             Spacer()
             
-            Image("anime-wolf")
+            Image("me")
                 .resizable()
                 .frame(width:200, height:200)
                 .clipShape(Circle())
                 .shadow(radius: 10)
             
-            Text("Pratama Yoga")
+            Text("Pratama Yoga Santosa")
                 .font(.largeTitle)
                 .fontWeight(.bold)
                 .foregroundColor(.white)
@@ -59,12 +59,13 @@ struct ProfileView: View {
             }
             
             Spacer()
+            Spacer()
         }
         .padding()
         .accentColor(Color("Primary"))
         .navigationBarColor(UIColor(Color("Dark")))
         .background(Color("Dark"))
-            .edgesIgnoringSafeArea([.bottom, .leading, .trailing])
+        .edgesIgnoringSafeArea([.bottom, .leading, .trailing])
     }
 }
 

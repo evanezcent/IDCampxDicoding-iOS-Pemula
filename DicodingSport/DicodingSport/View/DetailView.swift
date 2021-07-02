@@ -13,46 +13,46 @@ struct DetailView: View {
     @State var viewState = CGSize.zero
     
     var body: some View {
-         ScrollView(.vertical, showsIndicators: /*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/, content: {
-                    VStack(alignment: .leading){
-                        GeometryReader { geometry in
-                                        ImageCarousel(numberOfImages: 3) {
-                                            CarouselImage(imgURL: team.strTeamBadge, w: geometry.size.width-20, h: geometry.size.height)
-                                            CarouselImage(imgURL: team.strStadiumThumb, w: geometry.size.width-20, h: geometry.size.height)
-                                            CarouselImage(imgURL: team.strTeamJersey, w: geometry.size.width-20, h: geometry.size.height)
-                                        }
-                                    }.frame(height: 350, alignment: .center)
-                        
-                        VStack (alignment: .leading){
-                            Text(team.strTeam)
-                                .font(.title)
-                                .fontWeight(.bold)
-                                .foregroundColor(Color("Primary"))
-                                .padding(.top, 20)
-                            Text("a.k.a \(team.strKeywords)")
-                                .font(.system(size: 14))
-                                .italic()
-                                .foregroundColor(.white)
-                                .padding(.bottom, 12)
-                            Text("Description")
-                                .font(.title2)
-                                .fontWeight(.bold)
-                                .foregroundColor(Color("Primary"))
-                                .padding(.bottom, 6)
-                            Text(team.strDescriptionEN)
-                                .font(.system(size: 15))
-                                .foregroundColor(.white)
-                        }
-                        .padding(.horizontal, 10)
+        ScrollView(.vertical, showsIndicators: /*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/, content: {
+            VStack(alignment: .leading){
+                GeometryReader { geometry in
+                    ImageCarousel(numberOfImages: 3) {
+                        CarouselImage(imgURL: team.strTeamBadge, w: geometry.size.width-20, h: geometry.size.height)
+                        CarouselImage(imgURL: team.strStadiumThumb, w: geometry.size.width-20, h: geometry.size.height)
+                        CarouselImage(imgURL: team.strTeamJersey, w: geometry.size.width-20, h: geometry.size.height)
                     }
-                    .padding(.top, 10)
-                    .padding(.bottom, 20)
-                    .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
-            })
-         .navigationBarColor(UIColor(Color("Dark"))) 
-         .navigationBarTitle(Text(team.strTeam), displayMode: .inline)
-         .background(Color("Dark"))
-            .edgesIgnoringSafeArea([.bottom, .leading, .trailing])
+                }.frame(height: 350, alignment: .center)
+                
+                VStack (alignment: .leading){
+                    Text(team.strTeam)
+                        .font(.title)
+                        .fontWeight(.bold)
+                        .foregroundColor(Color("Primary"))
+                        .padding(.top, 20)
+                    Text("a.k.a \(team.strKeywords)")
+                        .font(.system(size: 14))
+                        .italic()
+                        .foregroundColor(.white)
+                        .padding(.bottom, 12)
+                    Text("Description")
+                        .font(.title2)
+                        .fontWeight(.bold)
+                        .foregroundColor(Color("Primary"))
+                        .padding(.bottom, 6)
+                    Text(team.strDescriptionEN)
+                        .font(.system(size: 15))
+                        .foregroundColor(.white)
+                }
+                .padding(.horizontal, 10)
+            }
+            .padding(.top, 10)
+            .padding(.bottom, 20)
+            .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
+        })
+        .navigationBarColor(UIColor(Color("Dark")))
+        .navigationBarTitle(Text(team.strTeam), displayMode: .inline)
+        .background(Color("Dark"))
+        .edgesIgnoringSafeArea([.bottom, .leading, .trailing])
     }
 }
 
@@ -68,11 +68,6 @@ struct Curves: Shape {
     }
     
 }
-//struct DetailView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        DetailView()
-//    }
-//}
 
 struct CarouselImage: View {
     @State var imgURL : String

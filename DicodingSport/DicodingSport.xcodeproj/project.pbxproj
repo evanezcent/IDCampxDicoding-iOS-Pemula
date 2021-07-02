@@ -112,7 +112,6 @@
 			isa = PBXGroup;
 			children = (
 				9D2F26CA2674A9640091D919 /* Provider */,
-				9D1EFEB02673A42B00B0B8C3 /* Controller */,
 				9D1EFEAF2673A42200B0B8C3 /* View */,
 				9D1EFEAD2673A40F00B0B8C3 /* Model */,
 				9D1EFE7F2673A3FD00B0B8C3 /* DicodingSportApp.swift */,
@@ -167,13 +166,6 @@
 				9D63A1E7268C7508002FFCCE /* ProfileView.swift */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		9D1EFEB02673A42B00B0B8C3 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Controller;
 			sourceTree = "<group>";
 		};
 		9D2F26CA2674A9640091D919 /* Provider */ = {
